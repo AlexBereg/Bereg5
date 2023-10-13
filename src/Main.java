@@ -32,45 +32,21 @@ public class Main {
 
 
 //    Задача 3
-        int year = 2100;
-        boolean leapYear = false;
-        boolean multiplicity4 = false;
-        boolean multiplicity100 = false;
-        boolean multiplicity400 = false;
-        float remains = year % 4;
-        if (remains == 0) {
-            multiplicity4 = true;
-        }
-        remains = year % 100;
-        if (remains == 0) {
-            multiplicity100 = true;
-        }
-        remains = year % 400;
-        if (remains == 0) {
-            multiplicity400 = true;
-        }
-        if (multiplicity4) {
-            if (multiplicity100 && multiplicity400 != true) {
-                leapYear = false;
-            } else {
-                leapYear = true;
-            }
-        }
-        if (year >= 1584) {
-            if (leapYear) {
-                System.out.println("Год является високосным");
-            } else {
-                System.out.println("Год НЕ является високосным");
-            }
+        int year = 1583;
+
+        if ((year >= 1584 && year % 4 == 0 && year % 100 != 0) || (year >= 1584 && year % 400 == 0)) {
+            System.out.println("Год является високосным");
+        } else if (year >= 1584) {
+            System.out.println("Год НЕ является високосным");
         } else {
             System.out.println("Високосный год был еще не введен");
         }
 
 //        Задача 4
 
-        int deliveryDistance = 95;
-        boolean delivery = true;
-        int time = 0;
+        int deliveryDistance = 150;
+
+        int time = -1;
         String timeText =" дня";
         if (deliveryDistance < 20) {
             time = 1;
@@ -79,9 +55,9 @@ public class Main {
             time = 2;
         } else if (deliveryDistance < 100) {
             time = 3;
-        } else delivery = false;
+        }
 
-        if (delivery) {
+        if (time > 0) {
             System.out.println("На доставку карты на " + deliveryDistance + " км потребуется " + time + timeText);
 
         } else {
@@ -95,40 +71,28 @@ public class Main {
 
         switch (monthNumber) {
             case 1:
-                season = "зима";
-                break;
             case 2:
+            case 12:
                 season = "зима";
                 break;
+
             case 3:
-                season = "весна";
-                break;
             case 4:
-                season = "весна";
-                break;
             case 5:
                 season = "весна";
                 break;
+
             case 6:
-                season = "лето";
-                break;
             case 7:
-                season = "лето";
-                break;
             case 8:
                 season = "лето";
                 break;
+
+
             case 9:
-                season = "осень";
-                break;
             case 10:
-                season = "осень";
-                break;
             case 11:
                 season = "осень";
-                break;
-            case 12:
-                season = "зима";
                 break;
 
             default:
