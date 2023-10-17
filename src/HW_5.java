@@ -1,6 +1,6 @@
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
-public class Main {
+public class HW_5 {
     public static void main(String[] args) {
 
         System.out.println("ДОМАШКА 5");
@@ -47,7 +47,7 @@ public class Main {
         int deliveryDistance = 150;
 
         int time = -1;
-        String timeText =" дня";
+        String timeText = " дня";
         if (deliveryDistance < 20) {
             time = 1;
             timeText = " день";
@@ -67,7 +67,7 @@ public class Main {
 //        Задача 5
 
         int monthNumber = 8;
-        String season ="";
+        String season = "";
 
         switch (monthNumber) {
             case 1:
@@ -99,7 +99,6 @@ public class Main {
                 System.out.println(monthNumber + "-го месяца не существует!!");
         }
         if (season != "") {
-            System.out.println(monthNumber + "-й месяц принадлежит к сезону " +season);
+            System.out.println(monthNumber + "-й месяц принадлежит к сезону " + season);
         }
-    }
-}
+    }}
