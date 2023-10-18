@@ -3,7 +3,5 @@ public class HW_6_2 {
         System.out.println("Домашка 6/2 по теме 'Циклы. Урок 2'");
 
 
-
-
     }
 }
