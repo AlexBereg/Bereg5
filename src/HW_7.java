@@ -1,6 +1,9 @@
 import java.util.Arrays;
 
 public class HW_7 {
+
+    public static final String FORMAT = "";
+
     public static void main(String[] args) {
 
         System.out.println("Задача 1");

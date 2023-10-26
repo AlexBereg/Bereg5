@@ -35,8 +35,8 @@ public class HW_6_2 {
             int mortality1000 = 8;
             int yar = 1;
             while (yar <= 10) {
-                totalPeople = (totalPeople/1000)*(growth1000 -mortality1000)+totalPeople;
-                System.out.println("Год "+yar+", численность населения составляет "+ totalPeople +" человек");
+                totalPeople = (totalPeople / 1000) * (growth1000 - mortality1000) + totalPeople;
+                System.out.println("Год " + yar + ", численность населения составляет " + totalPeople + " человек");
                 yar++;
             }
         }
