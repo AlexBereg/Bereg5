@@ -9,6 +9,18 @@ public class Book {
         this.yar = yar;
     }
 
+    public String getNameBook() {
+        return nameBook;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public int getYar() {
+        return yar;
+    }
+
     public void setYar(int yar) {
         this.yar = yar;
     }

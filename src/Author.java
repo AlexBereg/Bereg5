@@ -1,9 +1,15 @@
 public class Author {
-    private String nameAutor;
-    private String famAutor;
+    private String nameAuthor;
+    private String famAuthor;
 
-    public Author(String nameAutor, String famAutor) {
-        this.nameAutor = nameAutor;
-        this.famAutor = famAutor;
+    public Author(String nameAuthor, String famAuthor) {
+        this.nameAuthor = nameAuthor;
+        this.famAuthor = famAuthor;
+    }
+    public String getNameAuthor() {
+        return nameAuthor;
+    }
+    public String getFamAuthor() {
+        return famAuthor;
     }
 }
