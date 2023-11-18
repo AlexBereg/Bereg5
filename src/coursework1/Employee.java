@@ -1,25 +1,25 @@
-package CourseN_1;
+package coursework1;
     public class Employee {
         private String name;
-        private float salary;
+        private double salary;
         private int department;
 
         private int id;
-        private static int id0;
+        private static int counter;
 
         public Employee(String name, int salary, int department) {
-            id0++;
+            counter++;
             this.name = name;
             this.salary = salary;
             this.department = department;
-            this.id = id0;
+            this.id = counter;
         }
 
         public String getName() {
             return name;
         }
 
-        public float getSalary() {
+        public double getSalary() {
             return salary;
         }
 
@@ -31,7 +31,7 @@ package CourseN_1;
             return id;
         }
 
-        public void setSalary(float salary) {
+        public void setSalary(double salary) {
             this.salary = salary;
         }
 
