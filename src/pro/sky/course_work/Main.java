@@ -1,6 +1,8 @@
 package pro.sky.course_work;
+
 public class Main {
     private static Employee[] employee = new Employee[10];
+
     public static double summaSalary() {
         double sum = 0;
         for (int i = 0; i < employee.length; i++) {
@@ -8,6 +10,7 @@ public class Main {
         }
         return sum;
     }
+
     public static Employee minSalary() {
         Employee minSalary = employee[0];
         for (int i = 1; i < employee.length; i++) {
@@ -27,9 +30,10 @@ public class Main {
         }
         return maxSalary;
     }
+
     ////// Повышенная сложность методы//////
     //#1
-    public static Employee[] indexingSalary (double index) {
+    public static Employee[] indexingSalary(double index) {
         for (int i = 0; i < employee.length; i++) {
             double currentSal = employee[i].getSalary();
             double newSal = currentSal * (1 + (index / 100));
@@ -37,31 +41,34 @@ public class Main {
         }
         return employee;
     }
+
     //#2-1
-    public static Employee minSalaryDepartment (int departmentNumber) {
+    public static Employee minSalaryDepartment(int departmentNumber) {
         Employee minSalDep = null;
         for (int i = 0; i < employee.length; i++) {
             if (employee[i].getDepartment() == departmentNumber) {
                 if (minSalDep == null || employee[i].getSalary() < minSalDep.getSalary())
-                minSalDep = employee[i];
+                    minSalDep = employee[i];
             }
         }
         return minSalDep;
     }
+
     //#2-2
-    public static Employee maxSalaryDepartment (int departmentNumber) {
+    public static Employee maxSalaryDepartment(int departmentNumber) {
         Employee maxSalDep = null;
         for (int i = 0; i < employee.length; i++) {
             if (employee[i].getDepartment() == departmentNumber) {
-                if (maxSalDep == null ||employee[i].getSalary() > maxSalDep.getSalary())
-                maxSalDep = employee[i];
+                if (maxSalDep == null || employee[i].getSalary() > maxSalDep.getSalary())
+                    maxSalDep = employee[i];
             }
         }
         return maxSalDep;
     }
+
     //#2-3
-    public static double summaSalaryDepartment (int departmentNumber) {
-        double summaSalaryDepartment =0;
+    public static double summaSalaryDepartment(int departmentNumber) {
+        double summaSalaryDepartment = 0;
         for (int i = 0; i < employee.length; i++) {
             if (employee[i].getDepartment() == departmentNumber) {
                 summaSalaryDepartment = summaSalaryDepartment + employee[i].getSalary();
@@ -69,8 +76,9 @@ public class Main {
         }
         return summaSalaryDepartment;
     }
+
     //#2-4
-    public static double averageSalaryDepartment (int departmentNumber) {
+    public static double averageSalaryDepartment(int departmentNumber) {
         double averageSalaryDepartment;
         int n = 0;
         for (int i = 0; i < employee.length; i++) {
@@ -80,8 +88,9 @@ public class Main {
         }
         return summaSalaryDepartment(departmentNumber) / n;
     }
+
     //#2-5
-    public static Employee[] indexingSalaryDepartment (int departmentNumber, int index) {
+    public static Employee[] indexingSalaryDepartment(int departmentNumber, int index) {
         for (int i = 0; i < employee.length; i++) {
             if (employee[i].getDepartment() == departmentNumber) {
                 double newSal = employee[i].getSalary() * (1 + (index / 100));
@@ -90,29 +99,31 @@ public class Main {
         }
         return employee;
     }
+
     //#2-6
-    public static void printEmployeeDepartment (int departmentNumber) {
+    public static void printEmployeeDepartment(int departmentNumber) {
         for (int i = 0; i < employee.length; i++) {
             if (employee[i].getDepartment() == departmentNumber) {
-                System.out.println("*id= " +employee[i].getId() + " *" + employee[i].getName() +  " *Зарплата " + employee[i].getSalary());
+                System.out.println("*id= " + employee[i].getId() + " *" + employee[i].getName() + " *Зарплата " + employee[i].getSalary());
             }
         }
     }
 
     //#3-1
-    public static void printEmployeeSalaryLess (double salary) {
+    public static void printEmployeeSalaryLess(double salary) {
         System.out.println("Список сотрудников, у которых зарпалата меньше " + salary + " тугриков:");
         for (int i = 0; i < employee.length; i++) {
             if (employee[i].getSalary() < salary) {
-                System.out.println("*id= " +employee[i].getId() + " *" + employee[i].getName() +  " *Зарплата " + employee[i].getSalary());
+                System.out.println("*id= " + employee[i].getId() + " *" + employee[i].getName() + " *Зарплата " + employee[i].getSalary());
             }
         }
     }
-    public static void printEmployeeSalaryMore (double salary) {
+
+    public static void printEmployeeSalaryMore(double salary) {
         System.out.println("Список сотрудников, у которых зарплата больше или равна " + salary + " тугриков:");
         for (int i = 0; i < employee.length; i++) {
             if (employee[i].getSalary() >= salary) {
-                System.out.println("*id= " +employee[i].getId() + " *" + employee[i].getName() +  " *Зарплата " + employee[i].getSalary());
+                System.out.println("*id= " + employee[i].getId() + " *" + employee[i].getName() + " *Зарплата " + employee[i].getSalary());
             }
         }
     }
@@ -154,7 +165,7 @@ public class Main {
         System.out.println();
         System.out.println("Cотрудник с максимальной зарплатой : " + maxSalary());
         System.out.println();
-        System.out.println("Cреднее значение зарплат : " + summaSalary()/ employee.length);
+        System.out.println("Cреднее значение зарплат : " + summaSalary() / employee.length);
 
         ////// Повышенная сложность //////
 
@@ -193,7 +204,7 @@ public class Main {
 
         // Задача 2-f
         System.out.println("Список сотрудников отдела № " + departmentNumber + " после индексации ЗП на " + indexSalDep + " процентов");
-        printEmployeeDepartment (departmentNumber);
+        printEmployeeDepartment(departmentNumber);
         System.out.println();
 
         // Задача 3-1
@@ -204,4 +215,4 @@ public class Main {
         // Задача 3-2
         printEmployeeSalaryMore(salary);
     }
-    }
+}
