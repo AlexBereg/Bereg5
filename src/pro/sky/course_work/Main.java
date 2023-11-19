@@ -1,4 +1,4 @@
-package coursework1;
+package pro.sky.course_work;
 public class Main {
     private static Employee[] employee = new Employee[10];
     public static double summaSalary() {
@@ -29,7 +29,7 @@ public class Main {
     }
     ////// Повышенная сложность методы//////
     //#1
-    public static Employee[] indexingSalary (float index) {
+    public static Employee[] indexingSalary (double index) {
         for (int i = 0; i < employee.length; i++) {
             double currentSal = employee[i].getSalary();
             double newSal = currentSal * (1 + (index / 100));
@@ -62,7 +62,7 @@ public class Main {
     //#2-3
     public static double summaSalaryDepartment (int departmentNumber) {
         double summaSalaryDepartment =0;
-        for (int i = 1; i < employee.length; i++) {
+        for (int i = 0; i < employee.length; i++) {
             if (employee[i].getDepartment() == departmentNumber) {
                 summaSalaryDepartment = summaSalaryDepartment + employee[i].getSalary();
             }
@@ -73,7 +73,7 @@ public class Main {
     public static double averageSalaryDepartment (int departmentNumber) {
         double averageSalaryDepartment;
         int n = 0;
-        for (int i = 1; i < employee.length; i++) {
+        for (int i = 0; i < employee.length; i++) {
             if (employee[i].getDepartment() == departmentNumber) {
                 n = n + 1;
             }
@@ -162,7 +162,7 @@ public class Main {
         System.out.println("Курсовая 1 / Повышенная сложность");
         System.out.println();
         // Задача 1
-        float indexSal = 10;
+        double indexSal = 10;
         indexingSalary(indexSal);
         System.out.println("Проиндексировали зарплату на " + indexSal + " процентов:");
         for (int i = 0; i < employee.length; i++) {

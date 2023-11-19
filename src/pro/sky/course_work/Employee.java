@@ -1,4 +1,4 @@
-package coursework1;
+package pro.sky.course_work;
     public class Employee {
         private String name;
         private double salary;
