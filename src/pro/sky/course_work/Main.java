@@ -13,9 +13,9 @@ public class Main {
 
     public static Employee minSalary() {
         Employee minSalary = employee[0];
-        for (int i = 1; i < employee.length; i++) {
-            if (minSalary.getSalary() > employee[i].getSalary()) {
-                minSalary = employee[i];
+        for (Employee employee1 : employee) {
+            if (minSalary.getSalary() > employee1.getSalary()) {
+                minSalary = employee1;
             }
         }
         return minSalary;
