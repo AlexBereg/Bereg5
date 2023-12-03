@@ -39,8 +39,12 @@ public class HW_1 {
 
     public static void changePerson(Person person) {
         person = new Person("Ilya", "Lagutenko");
-        System.out.println("person = " + person);
+//        System.out.println("person = " + person);
 
+    }
+    public static void changePerson1(Person person) {
+        person.setName("Ilya");
+        person.setSurname("Lagutenko");
     }
 
 
@@ -69,6 +73,8 @@ public class HW_1 {
         changePerson(person);
         System.out.println(person);
 
+        changePerson1(person);
+        System.out.println(person);
     }
 
 }
