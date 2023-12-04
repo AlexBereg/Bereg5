@@ -1,6 +1,4 @@
-package course_2;
-
-import java.sql.Array;
+package course_2.course_21;
 
 public class HW_1 {
 //    ## Задание 5
