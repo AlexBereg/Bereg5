@@ -1,4 +1,4 @@
-package course_2;
+package course_2.course_21;
 
 public class Person {
     private String name;
