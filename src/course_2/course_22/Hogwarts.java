@@ -1,38 +1,54 @@
 package course_2.course_22;
 
 public class Hogwarts {
-//    private String name;
-    private final String property1 = "Сила магии";
-    private int property1Force;
-    private final String property2 = "Расстояние трансгрессии";
-    private int property2Force;
+    private final String studentName;
+    private final String powerOfMagic = "Сила магии";
+    private int forcePowerOfMagic;
+    private final String transgressionDistance = "Расстояние трансгрессии";
+    private int forceTransgressionDistance;
 
-    public Hogwarts(int property1Force, int property2Force) {
-        this.property1Force = property1Force;
-        this.property2Force = property2Force;
+    public Hogwarts(String studentName, int forcePowerOfMagic, int forceTransgressionDistance) {
+        this.studentName = studentName;
+        this.forcePowerOfMagic = forcePowerOfMagic;
+        this.forceTransgressionDistance = forceTransgressionDistance;
     }
 
-    public String getProperty1() {
-        return property1;
+    public String getStudentName() {
+        return studentName;
     }
 
-    public int getProperty1Force() {
-        return property1Force;
+    public String getPowerOfMagic() {
+        return powerOfMagic;
     }
 
-    public void setProperty1Force(int property1Force) {
-        this.property1Force = property1Force;
+    public int getForcePowerOfMagic() {
+        return forcePowerOfMagic;
     }
 
-    public String getProperty2() {
-        return property2;
+    public void setForcePowerOfMagic(int forcePowerOfMagic) {
+        this.forcePowerOfMagic = forcePowerOfMagic;
     }
 
-    public int getProperty2Force() {
-        return property2Force;
+    public String getTransgressionDistance() {
+        return transgressionDistance;
     }
 
-    public void setProperty2Force(int property2Force) {
-        this.property2Force = property2Force;
+    public int getForceTransgressionDistance() {
+        return forceTransgressionDistance;
+    }
+
+    public void setForceTransgressionDistance(int forceTransgressionDistance) {
+        this.forceTransgressionDistance = forceTransgressionDistance;
+    }
+
+    public static void CompareStudent(Hogwarts st1, Hogwarts st2) {
+        int delta = st1.forcePowerOfMagic + st1.forceTransgressionDistance - st2.forcePowerOfMagic - st2.forceTransgressionDistance;
+        if (delta == 0) {
+            System.out.println("Мощности обоих сущностей, " + st1.studentName + " и " + st2.studentName + ", равны");
+        } else if (delta > 0) {
+            System.out.println(st1.studentName + " обладает бОльшей мощностью магии, чем " + st2.studentName);
+        } else {
+            System.out.println(st2.studentName + " обладает бОльшей мощностью магии, чем " + st1.studentName);
+        }
     }
 }
