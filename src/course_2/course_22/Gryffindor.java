@@ -81,4 +81,21 @@ public class Gryffindor extends Hogwarts {
         }
         System.out.println(best + " лучший Гриффиндорец , чем " + worst);
     }
+
+    // Метод 2 от Алексея. Не статик!!
+    public void Compare(Gryffindor other) {
+        String best = getStudentName();
+        String worst = other.getStudentName();
+        int sumPoperties1 = getForceNobility() + getForceHonor() + getForceBravery();
+        int sumPoperties2 = other.getForceNobility() + other.getForceHonor() + other.getForceBravery();
+
+        if (sumPoperties1 == sumPoperties2) {
+            System.out.println("Студенты " + best + " и " + worst + "равные по сумме свойств Гриффиндорцы");
+            return;
+        } else if (sumPoperties1 > sumPoperties2) {
+            best = other.getStudentName();
+            worst = getStudentName();
+        }
+        System.out.println(best + " лучший Гриффиндорец , чем " + worst);
+    }
 }
