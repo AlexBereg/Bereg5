@@ -38,6 +38,9 @@ public class Hw_22 {
 
 //        Реализуйте 4 метода, по одному для каждого факультета, которые сравнивают между собой двух учеников одного факультета по свойствам.
         Gryffindor.CompareStudentsFaculty(student1, student3);
+//        "Метод 2"
+        System.out.println("Метод 2");
+        student1.Compare(student3);
         Slytherin.CompareStudentsFaculty(student4, student5);
         Puffeduy.CompareStudentsFaculty(student7, student9);
         Ravenclaw.CompareStudentsFaculty(student10, student12);
