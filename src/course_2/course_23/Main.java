@@ -9,19 +9,16 @@ public class Main {
         Bicycle bicycle = new Bicycle("bicycle1",2);
         Bicycle bicycle2 = new Bicycle("bicycle2",2);
 
-        ServiceStation station = new Station();
-        station.check(bicycle);
+        bicycle.check();
         System.out.println();
-        station.check(bicycle);
+        bicycle2.check();
         System.out.println();
-        station.check(bicycle2);
+        car.check();
         System.out.println();
-        station.check(car);
+        car2.check();
         System.out.println();
-        station.check(car2);
+        truck.check();
         System.out.println();
-        station.check(truck);
-        System.out.println();
-        station.check(truck2);
+        truck2.check();
     }
 }

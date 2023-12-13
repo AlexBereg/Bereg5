@@ -1,6 +1,6 @@
 package course_2.course_23;
 
-public class Bicycle {
+public class Bicycle implements ServiceStation {
     private final String modelName;
     private final int wheelsCount;
 
@@ -19,5 +19,13 @@ public class Bicycle {
 
     public void updateTyre() {
         System.out.println("Меняем покрышку");
+    }
+
+    @Override
+    public void check() {
+        System.out.println("Обслуживаем " + modelName);
+        for (int i = 0; i < wheelsCount; i++) {
+            updateTyre();
+        }
     }
 }

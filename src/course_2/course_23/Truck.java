@@ -1,6 +1,6 @@
 package course_2.course_23;
 
-public class Truck {
+public class Truck implements ServiceStation{
     private final String modelName;
     private final int wheelsCount;
 
@@ -27,5 +27,15 @@ public class Truck {
 
     public void checkTrailer() {
         System.out.println("Проверяем прицеп");
+    }
+
+    @Override
+    public void check() {
+        System.out.println("Обслуживаем " + modelName);
+        for (int i = 0; i < wheelsCount; i++) {
+            updateTyre();
+        }
+        checkEngine();
+        checkTrailer();
     }
 }
