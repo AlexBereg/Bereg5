@@ -1,6 +1,6 @@
 package course_2.course_23;
 
-public class Bicycle implements ServiceStation {
+public class Bicycle implements Transport {
     private final String modelName;
     private final int wheelsCount;
 
@@ -20,9 +20,8 @@ public class Bicycle implements ServiceStation {
     public void updateTyre() {
         System.out.println("Меняем покрышку");
     }
-
     @Override
-    public void check() {
+    public void service() {
         System.out.println("Обслуживаем " + modelName);
         for (int i = 0; i < wheelsCount; i++) {
             updateTyre();
